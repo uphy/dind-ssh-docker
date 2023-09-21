@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 echo Creating the user: $USER
 addgroup docker && \
-adduser -D $USER -Gdocker -s /bin/bash > /dev/null 2>&1
+adduser -D $USER -Gdocker -s /bin/sh > /dev/null 2>&1
 echo "$USER:$PASSWORD" | chpasswd > /dev/null 2>&1
 
 echo Generating ssh host keys...
